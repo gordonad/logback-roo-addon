@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+
+	<logback>
+		<properties>
+			<logback.version>0.9.26</logback.version>
+			<slf4j.version>1.6.1</slf4j.version>
+		</properties>
+		<dependencies>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jul-to-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-core</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
+			<!-- TODO What is the "access" jar used for? -->
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-access</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
+		</dependencies>
+		<remove>
+			<dependencies>
+				<dependency>
+					<dependency>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-log4j12</artifactId>
+						<version>${slf4j.version}</version>
+					</dependency>
+				</dependency>
+				<!-- TODO Do we need to remove log4J also? -->
+				<!-- <dependency> <groupId>log4j</groupId> <artifactId>log4j</artifactId> 
+					<version>1.2.16</version> </dependency> -->
+			</dependencies>
+		</remove>
+
+	</logback>
+
+	<batch>
+		<dependencies>
+			<!-- Ivy-style dependency definition -->
+			<dependency org="org.springframework.batch" name="spring-batch-core"
+				rev="2.1.1.RELEASE" />
+
+			<!-- Maven-style dependency definition (should be used if exclusions need 
+				to be defined) -->
+			<dependency>
+				<groupId>com.gordondickens.roo.addon</groupId>
+				<artifactId>com.gordondickens.roo.addon.logback</artifactId>
+				<version>0.1.0.BUILD-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</batch>
+</configuration>
