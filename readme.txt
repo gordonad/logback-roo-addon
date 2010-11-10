@@ -6,6 +6,7 @@ In version 0.1.0:
 2. Note your Maven file location and jar file name (you need this for the next step)
 3. At the Roo Shell type the following:
    osgi start --url  file:///user_home/.m2/repository/com/gordondickens/roo/addon/roo.addon.logback/0.1.0.BUILD-SNAPSHOT/roo.addon.logback-0.1.0.BUILD-SNAPSHOT.jar
+*** Set our maven directory in the above line first!
 
 4. Verify with the following commmand:
    osgi ps
