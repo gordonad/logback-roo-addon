@@ -34,8 +34,8 @@ public class LogbackCommands implements CommandMarker {
 	}
 
 	/*
-	 * TODO Configure to accept parameter --overwrite (default true) TODO
-	 * Configure to accept parameter --level (default ?)
+	 * TODO Configure to accept parameter --overwrite (default true)
+	 * TODO Configure to accept parameter --level (default ?)
 	 * 
 	 * @CliCommand(value="logging setup",
 	 * help="Configure logging in your project") public void
