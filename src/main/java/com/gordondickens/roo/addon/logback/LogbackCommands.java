@@ -19,8 +19,8 @@ import org.springframework.roo.shell.CommandMarker;
 @Component
 @Service
 public class LogbackCommands implements CommandMarker {
-	private static Logger logger = Logger.getLogger(LogbackCommands.class
-			.getName());
+//	private static Logger logger = Logger.getLogger(LogbackCommands.class
+//			.getName());
 	@Reference
 	private LogbackOperations operations;
 
@@ -34,8 +34,8 @@ public class LogbackCommands implements CommandMarker {
 	}
 
 	/*
-	 * TODO Configure to accept parameter --overwrite (default true)
-	 * TODO Configure to accept parameter --level (default ?)
+	 * TODO Configure to accept parameter --overwrite (default true) TODO
+	 * Configure to accept parameter --level (default ?)
 	 * 
 	 * @CliCommand(value="logging setup",
 	 * help="Configure logging in your project") public void
@@ -49,7 +49,7 @@ public class LogbackCommands implements CommandMarker {
 	 * loggingOperations.configureLogging(logLevel, loggerAppender==null ?
 	 * LoggerPackage.ROOT : loggerAppender); }
 	 */
-	@CliCommand(value = "logback setup", help = "Setup Logback addon")
+	@CliCommand(value = "logback setup", help = "Install Logback Logging supporting SLF4J, Log4J, java.util.Logging and jakarta.commons.Logging")
 	public void setup() {
 		operations.setup();
 	}

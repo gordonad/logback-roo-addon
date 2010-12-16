@@ -1,0 +1,14 @@
+# TEST LOGBACK 0.2.0
+
+development mode
+project --topLevelPackage com.gordondickens.testlogback
+persistence setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+entity --class ~.Item
+field string name
+field string description
+controller scaffold --class ~.ItemController
+help
+osgi start --url file:///Users/gordon/.m2/repository/com/gordondickens/roo/addon/com.gordondickens.roo.addon.logback/0.2.0.BUILD-SNAPSHOT/com.gordondickens.roo.addon.logback-0.2.0.BUILD-SNAPSHOT.jar
+osgi ps
+
+#Now type> logback setup

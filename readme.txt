@@ -1,6 +1,38 @@
-Welcome to the Roo LogBack addon!
+[---------------------------------------------]
+[-     Welcome to the Roo Logback addon!     -]
+[---------------------------------------------]
 
+[---------------------------------------------]
+[--            by Gordon Dickens            --]
+[---------------------------------------------]
+[ * Twitter: gdickens                       --]
+[ * LinkedIn: linkedin.com/in/gordondickens --]
+[ * Blog: gordondickens.com                 --]
+[ * email: gordon@gordondickens.com         --]
+[---------------------------------------------]
+
+[---------------------------------------------]
+[ * Source: https://github.com/gordonad/logback-roo-addon -]
+[---------------------------------------------]
+
+[---------------------------------------------]
+[ * Logback Site: http://logback.qos.ch/
+[---------------------------------------------]
+
+--------- - -----------------------------------------------
+16-Dec-10 - gDickens
+--------- - -----------------------------------------------
+Updates for version 0.2.0
+* Removed unnecessary annotation and code classes
+* Tested with Roo 1.1.1
+* Added test script project for installing the Logback addon - NOTE: you have to update the repository directory for your system
+* Test script: scripts/testlogback.roo
+
+
+
+--------- - -----------------------------------------------
 09-Nov-10 - gDickens - Instructions for test release
+--------- - -----------------------------------------------
 In version 0.1.0:
 1. Build the AddOn Project with Maven
 2. Note your Maven file location and jar file name (you need this for the next step)
