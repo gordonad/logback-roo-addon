@@ -3,23 +3,23 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.gordondickens.roo.addon</groupId>
-	<artifactId>roo.addon.logback</artifactId>
+	<artifactId>com.gordondickens.roo.addon.logback</artifactId>
 	<packaging>bundle</packaging>
-	<version>0.1.0.BUILD-SNAPSHOT</version>
-	<name>roo-addon-logback</name>
+	<version>0.2.0.BUILD-SNAPSHOT</version>
+	<name>Logback - Fast Flexible Logging Addon</name>
 	<url>http://www.gordondickens.com</url>
 	<developers>
 		<developer>
 			<id>gordon.dickens</id>
 			<name>Gordon Dickens</name>
-			<email>gordondickens@gmail.com</email>
+			<email>gordon@gordondickens.com</email>
 			<roles>
 				<role>Author</role>
 			</roles>
 			<organization>http://www.gordondickens.com</organization>
 		</developer>
 	</developers>
-	<description>Roo Addon to Change to Logback with SLF4J</description>
+	<description>Roo Addon to Change to Logback with SLF4J, JUL and JCL Wrappers</description>
 	<organization>
 		<name>gordondickens.com</name>
 	</organization>
@@ -33,6 +33,7 @@
 
 	<properties>
 		<roo.version>1.1.0.RELEASE</roo.version>
+		<roo.addon.version>1.1.1.RELEASE</roo.addon.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<google.code.project.name>${project.name}</google.code.project.name>
 		<repo.folder>com/gordondickens/roo/addon/logback</repo.folder>
@@ -64,6 +65,18 @@
 			<version>4.1.0</version>
 		</dependency>
 		<!-- Apache Felix -->
+        <dependency>
+            <groupId>org.springframework.roo</groupId>
+            <artifactId>org.springframework.roo.addon.beaninfo</artifactId>
+            <version>${roo.addon.version}</version>
+            <type>bundle</type>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.roo</groupId>
+            <artifactId>org.springframework.roo.addon.configurable</artifactId>
+            <version>${roo.addon.version}</version>
+            <type>bundle</type>
+        </dependency>
 		<dependency>
 			<groupId>org.apache.felix</groupId>
 			<artifactId>org.apache.felix.scr.annotations</artifactId>

@@ -89,15 +89,17 @@ public class LogbackOperationsImpl implements LogbackOperations {
 						+ PhysicalTypeIdentifier.getFriendlyName(id));
 		MutableClassOrInterfaceTypeDetails mutableTypeDetails = (MutableClassOrInterfaceTypeDetails) ptd;
 
-		if (null == MemberFindingUtils.getAnnotationOfType(mutableTypeDetails
-				.getAnnotations(), new JavaType(RooLogback.class.getName()))) {
-			JavaType rooRooLogback = new JavaType(RooLogback.class.getName());
-			if (!mutableTypeDetails.getAnnotations().contains(rooRooLogback)) {
-				AnnotationMetadataBuilder annotationBuilder = new AnnotationMetadataBuilder(
-						rooRooLogback);
-				mutableTypeDetails.addTypeAnnotation(annotationBuilder.build());
-			}
-		}
+		//TODO - Add Annotation to automatically create the logging factory for the class
+		//TODO - Create LogbackMetaData.java, LogbackMetaDataProvider.java, RooLogback.java (annotation)
+//		if (null == MemberFindingUtils.getAnnotationOfType(mutableTypeDetails
+//				.getAnnotations(), new JavaType(RooLogback.class.getName()))) {
+//			JavaType rooRooLogback = new JavaType(RooLogback.class.getName());
+//			if (!mutableTypeDetails.getAnnotations().contains(rooRooLogback)) {
+//				AnnotationMetadataBuilder annotationBuilder = new AnnotationMetadataBuilder(
+//						rooRooLogback);
+//				mutableTypeDetails.addTypeAnnotation(annotationBuilder.build());
+//			}
+//		}
 	}
 
 	public void setup() {
